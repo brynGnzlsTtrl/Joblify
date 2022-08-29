@@ -38,32 +38,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-var logoAttri = {
-  sLight: {
-    svg: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
-      width: "37",
-      height: "30",
-      viewBox: "0 0 37 30",
-      fill: "none",
-      xmlns: "http://www.w3.org/2000/svg"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
-      d: "M34.9047 5.9842C27.8172 2.67922 19.7235 5.03546 16.8271 11.247C13.9306 17.4586 17.3281 25.1732 24.4156 28.4782C31.5032 31.7832 20.6849 20.6082 23.5814 14.3966C26.4779 8.18507 41.9923 9.28917 34.9047 5.9842Z",
-      fill: "#9B4DFF"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
-      d: "M23.1648 11.6326C23.1648 17.3288 3.7975 35.1771 11.0128 21.4922C4.93058 21.4922 0 17.5848 0 12.7649C0 7.94489 4.93058 4.03754 11.0128 4.03754C17.0949 4.03754 23.1648 5.50277 23.1648 11.6326Z",
-      fill: "#8AFFCF"
-    })),
-    style: {
-      font: "normal 400 16px/1.0 Rubik",
-      color: "#ffffff"
-    }
-  }
-};
 function BrandLogo() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    style: logoAttri.sLight.style
+    style: logoStyle
   }, "Joblify Logo");
 }
+var logoAttri = {
+  "default": {
+    fontFamily: "Rubik, Arial, Helvetica, sans-serif",
+    fontWeight: 500
+  },
+  dark: {
+    color: "var(--bg-3)"
+  },
+  light: {
+    color: "#ffffff"
+  },
+  small: {
+    fontSize: "33px"
+  },
+  regular: {
+    fontSize: "52px"
+  },
+  large: {
+    fontSize: "72px"
+  }
+};
+var logoStyle = {
+  small_Dark: [logoAttri.light, logoAttri["default"], logoAttri.small]
+};
 
 /***/ }),
 
@@ -33445,7 +33448,7 @@ if (false) {} else {
   \************************************/
 /***/ ((module) => {
 
-module.exports = "data:text/x-scss;base64,Ly8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luCmV4cG9ydCB7fTs=";
+module.exports = "data:text/x-scss;base64,Ly8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luCmV4cG9ydCB7fTsKICAgIGlmKG1vZHVsZS5ob3QpIHsKICAgICAgLy8gMTY2MTc3NDU4NTEwNAogICAgICB2YXIgY3NzUmVsb2FkID0gcmVxdWlyZSgiLi4vLi4vLi4vbm9kZV9tb2R1bGVzL21pbmktY3NzLWV4dHJhY3QtcGx1Z2luL2Rpc3QvaG1yL2hvdE1vZHVsZVJlcGxhY2VtZW50LmpzIikobW9kdWxlLmlkLCB7ImxvY2FscyI6ZmFsc2V9KTsKICAgICAgbW9kdWxlLmhvdC5kaXNwb3NlKGNzc1JlbG9hZCk7CiAgICAgIG1vZHVsZS5ob3QuYWNjZXB0KHVuZGVmaW5lZCwgY3NzUmVsb2FkKTsKICAgIH0KICA=";
 
 /***/ })
 

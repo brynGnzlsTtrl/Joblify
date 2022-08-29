@@ -60,7 +60,7 @@ module.exports = {
   },
   devServer: {
     open: true,
-    hot: "only",
+    // hot: "only",
     static: {
       directory: path.join(__dirname, "dist"),
     },
