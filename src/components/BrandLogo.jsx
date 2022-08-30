@@ -4,7 +4,7 @@ export default function BrandLogo({ className = "" }) {
   return (
     <div className={className}>
       {logoIcons.small}
-      <p style={logoStyle.lightSmall}>Joblify</p>
+      <p style={logoStyle.darkSmall}>Joblify</p>
     </div>
   );
 }

@@ -2,10 +2,19 @@ import React from "react";
 
 export default function SignUp({ className }) {
   return (
-    <form className={className}>
+    <div className={className}>
       <h1>Log in</h1>
-      <Input type="email" name="Email" />
-      <Input type="password" name="Password" />
+      <form className="sign-in-form">
+        <Input type="email" name="Email" />
+        <Input type="password" name="Password" />
+        <div className="sign-in-form__sub-input sub-input">
+          <div className="remember-user">
+            <input type="checkbox" name="remember-user" id="remember-user" />
+            <label for="remember-user">Remember User</label>
+          </div>
+          <a href="#" className="forgot-password">Forgot Password</a>
+        </div>
+      </form>
       <button class="sign-up__button" type="submit">
         Sign in
       </button>
@@ -15,7 +24,8 @@ export default function SignUp({ className }) {
         <span>OR</span>
         <hr />
       </div>
-      <LogAlternative name="Google">
+      <div className="sign-up__log-alt-cont">
+      <LogAlternative platform="Google">
         <svg
           className="log-Alternative__icon"
           width="20"
@@ -42,12 +52,12 @@ export default function SignUp({ className }) {
           />
         </svg>
       </LogAlternative>
-      <LogAlternative name="Apple">
+      <LogAlternative platform="Apple">
         <svg
           className="log-alternative__icon"
-          width="22"
+          width="21"
           height="21"
-          viewBox="0 0 22 21"
+          viewBox="0 0 21 21"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -57,7 +67,9 @@ export default function SignUp({ className }) {
           />
         </svg>
       </LogAlternative>
-    </form>
+      </div>
+      
+    </div>
   );
 }
 
