@@ -1,0 +1,31 @@
+.sign-up {
+    h1 {
+        font: var(--Poppins_h4_SB);
+        color: var(--bg_3);
+    }
+}
+.sign-input {
+    position: relative;
+    label {
+        font: var(--Poppins_p4_SB);
+        color: var(--fg_4);
+    }
+    &__input-cont {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+
+        input[type="email"], input[type="password"] {
+            border: 2px solid var(--fg_3);
+            height: 40.5px;
+            border-radius: 10px;
+    
+        }
+        @at-root .input-cont__placeholder {
+            position: absolute;
+            font: var(--Poppins_p3_R);
+            color: var(--fg_2);
+        }
+    }
+}

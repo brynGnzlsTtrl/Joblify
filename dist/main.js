@@ -20,7 +20,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_BrandLogo_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "log-in-form"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_BrandLogo_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    className: "log-in-form__brand-logo"
+  }));
 }
 
 /***/ }),
@@ -38,34 +42,105 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-function BrandLogo() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    style: logoStyle
-  }, "Joblify Logo");
+
+function BrandLogo(_ref) {
+  var _ref$className = _ref.className,
+      className = _ref$className === void 0 ? "" : _ref$className;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: className
+  }, logoIcons.small, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    style: logoStyle.lightSmall
+  }, "Joblify Logo"));
 }
-var logoAttri = {
-  "default": {
-    fontFamily: "Rubik, Arial, Helvetica, sans-serif",
-    fontWeight: 500
-  },
-  dark: {
-    color: "var(--bg-3)"
-  },
-  light: {
-    color: "#ffffff"
-  },
+var logoIcons = {
+  small: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+    style: iconAttri.small,
+    width: "26",
+    height: "21",
+    viewBox: "0 0 26 21",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+    d: "M24.5275 4.20508C19.5471 1.88267 13.8597 3.5384 11.8243 7.90325C9.78899 12.2681 12.1764 17.6892 17.1568 20.0116C22.1372 22.334 14.5353 14.4813 16.5706 10.1165C18.606 5.75163 29.5079 6.52748 24.5275 4.20508Z",
+    fill: "#9B4CFF"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+    d: "M16.2778 8.17418C16.2778 12.1769 2.6685 24.7189 7.73865 15.1025C3.46471 15.1025 0 12.3568 0 8.96985C0 5.58287 3.46471 2.83718 7.73865 2.83718C12.0126 2.83718 16.2778 3.8668 16.2778 8.17418Z",
+    fill: "#8AFFCF"
+  })),
+  regular: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+    style: iconAttri.small,
+    width: "37",
+    height: "30",
+    viewBox: "0 0 37 30",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+    d: "M34.9047 5.9842C27.8172 2.67922 19.7235 5.03546 16.8271 11.247C13.9306 17.4586 17.3281 25.1732 24.4156 28.4782C31.5032 31.7832 20.6849 20.6082 23.5814 14.3966C26.4779 8.18507 41.9923 9.28917 34.9047 5.9842Z",
+    fill: "#9B4DFF"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+    d: "M23.1648 11.6326C23.1648 17.3288 3.7975 35.1771 11.0128 21.4922C4.93058 21.4922 0 17.5848 0 12.7649C0 7.94489 4.93058 4.03754 11.0128 4.03754C17.0949 4.03754 23.1648 5.50277 23.1648 11.6326Z",
+    fill: "#8AFFCF"
+  })),
+  large: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+    width: "56",
+    height: "45",
+    viewBox: "0 0 56 45",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+    d: "M52.8288 9.05709C42.1017 4.05496 29.8518 7.62116 25.4679 17.0224C21.084 26.4237 26.2262 38.0999 36.9533 43.1021C47.6804 48.1042 31.3069 31.1907 35.6907 21.7894C40.0746 12.3881 63.5559 14.0592 52.8288 9.05709Z",
+    fill: "#9B4CFF"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+    d: "M35.0602 17.606C35.0602 26.2273 5.74757 53.2409 16.668 32.5286C7.4625 32.5286 0 26.6148 0 19.3197C0 12.0247 7.4625 6.11084 16.668 6.11084C25.8734 6.11084 35.0602 8.32848 35.0602 17.606Z",
+    fill: "#8AFFCF"
+  }))
+};
+var fontAttri = {
+  font: "Rubik, Arial, Helvetica, sans-serif",
+  dark: "var(--bg-3)",
+  light: "#ffffff",
+  smallFs: "33px",
+  regularFs: "52px",
+  large: "72px"
+};
+var iconAttri = {
   small: {
-    fontSize: "33px"
-  },
-  regular: {
-    fontSize: "52px"
-  },
-  large: {
-    fontSize: "72px"
+    position: "relative",
+    bottom: "2px",
+    left: "3px"
   }
 };
 var logoStyle = {
-  small_Dark: [logoAttri.light, logoAttri["default"], logoAttri.small]
+  lightSmall: {
+    fontFamily: fontAttri.font,
+    color: fontAttri.light,
+    fontSize: fontAttri.smallFs
+  },
+  lightRegular: {
+    fontFamily: fontAttri.font,
+    color: fontAttri.light,
+    fontSize: fontAttri.regularFs
+  },
+  lightLarge: {
+    fontFamily: fontAttri.font,
+    color: fontAttri.light,
+    fontSize: fontAttri.largeFs
+  },
+  darkSmall: {
+    fontFamily: fontAttri.font,
+    color: fontAttri.dark,
+    fontSize: fontAttri.smallFs
+  },
+  darkRegular: {
+    fontFamily: fontAttri.font,
+    color: fontAttri.dark,
+    fontSize: fontAttri.regularFs
+  },
+  darkLarge: {
+    fontFamilt: fontAttri.font,
+    color: fontAttri.dark,
+    fontSize: fontAttri.largeFs
+  }
 };
 
 /***/ }),
@@ -33448,7 +33523,7 @@ if (false) {} else {
   \************************************/
 /***/ ((module) => {
 
-module.exports = "data:text/x-scss;base64,Ly8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luCmV4cG9ydCB7fTsKICAgIGlmKG1vZHVsZS5ob3QpIHsKICAgICAgLy8gMTY2MTc3NDU4NTEwNAogICAgICB2YXIgY3NzUmVsb2FkID0gcmVxdWlyZSgiLi4vLi4vLi4vbm9kZV9tb2R1bGVzL21pbmktY3NzLWV4dHJhY3QtcGx1Z2luL2Rpc3QvaG1yL2hvdE1vZHVsZVJlcGxhY2VtZW50LmpzIikobW9kdWxlLmlkLCB7ImxvY2FscyI6ZmFsc2V9KTsKICAgICAgbW9kdWxlLmhvdC5kaXNwb3NlKGNzc1JlbG9hZCk7CiAgICAgIG1vZHVsZS5ob3QuYWNjZXB0KHVuZGVmaW5lZCwgY3NzUmVsb2FkKTsKICAgIH0KICA=";
+module.exports = "data:text/x-scss;base64,Ly8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luCmV4cG9ydCB7fTsKICAgIGlmKG1vZHVsZS5ob3QpIHsKICAgICAgLy8gMTY2MTgxODEzODQ3NwogICAgICB2YXIgY3NzUmVsb2FkID0gcmVxdWlyZSgiLi4vLi4vLi4vbm9kZV9tb2R1bGVzL21pbmktY3NzLWV4dHJhY3QtcGx1Z2luL2Rpc3QvaG1yL2hvdE1vZHVsZVJlcGxhY2VtZW50LmpzIikobW9kdWxlLmlkLCB7ImxvY2FscyI6ZmFsc2V9KTsKICAgICAgbW9kdWxlLmhvdC5kaXNwb3NlKGNzc1JlbG9hZCk7CiAgICAgIG1vZHVsZS5ob3QuYWNjZXB0KHVuZGVmaW5lZCwgY3NzUmVsb2FkKTsKICAgIH0KICA=";
 
 /***/ })
 

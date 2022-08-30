@@ -29,6 +29,18 @@
   --fg_4: #474D52;
   --fg_5: #28272F;
 }
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.log-in-form__brand-logo {
+  display: flex;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 body {
   background: teal;
 }

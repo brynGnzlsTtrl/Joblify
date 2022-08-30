@@ -3,17 +3,18 @@
 
 
 // base
+@import "./base/resets";
 
 
 
 // components
-@import "./components/brandLogo";
+@import "./components/_signUp";
 
 
 
 // media 
 body {
-    background: teal;
+    background: #f5f5f5;
 }
 
 
@@ -22,7 +23,7 @@ body {
 
 
 // reusables
-
+@import "./reusable/brandLogo.scss"
 
 
 // vendors
