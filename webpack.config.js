@@ -23,10 +23,11 @@ module.exports = {
       },
       {
         test: /.scss/, // test: /\.((s[ac]|c)ss|(jsx?))/i,
+        exclude: /node_modules/,
         type: "asset",
       },
       {
-        test: /\.(svg|img|jpg|avif|woff|woff2|webp)$/,
+        test: /\.(svg|img|jpg|avif|woff|woff2|webp|png)$/,
         type: 'asset/resource'
       },
       {

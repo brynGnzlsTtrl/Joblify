@@ -1,0 +1,199 @@
+.log-in-form {
+  @include min-media(tablet) {
+    &__sign-up {
+      height: 535px;
+      width: 400px;
+      background: linear-gradient(
+        164.21deg,
+        rgba(255, 255, 255, 0.4) 3.03%,
+        rgba(255, 255, 255, 0.1) 95.86%
+      );
+      border-radius: 30px;
+      box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+
+      h1 {
+        text-align: initial;
+        margin-bottom: 25px;
+      }
+    }
+    &__ellipse_bg-1 {
+      left: calc(150px + (50vw - 480px));
+      top: calc(50vh - -53px);
+      width: 315px;
+      height: 315px;
+      z-index: -1;
+    }
+    &__ellipse_bg-2 {
+      top: calc(50vh - 211px);
+      right: calc(360px + (50vw - 480px));
+      width: 60px;
+      height: 60px;
+      z-index: -1;
+    }
+
+    .sign-up {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      &__cont {
+        width: 80%;
+      }
+      &__overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        border: 2px solid;
+        border-image-source: linear-gradient(
+          157.19deg,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0) 100.04%
+        );
+
+        opacity: 0.3;
+        z-index: -1;
+      }
+      &__or {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+    }
+    .circle-container {
+      display: block;
+    }
+  }
+  @include min-media(tablet2x) {
+    &__brand-logo {
+      left: 50px;
+      z-index: 2;
+    }
+    &__sign-up {
+      height: 500px;
+    }
+    .sign-up {
+      position: absolute;
+      right: 0;
+      width: 50vw;
+      border: none;
+      background: none;
+      border-radius: initial;
+      box-shadow: initial;
+      backdrop-filter: none;
+
+      &__cont {
+        width: 340px;
+      }
+      &__overlay {
+        display: none;
+      }
+    }
+    &__ellipse_bg-1 {
+      display: none;
+    }
+    &__ellipse_bg-2 {
+      display: none;
+    }
+    .circle-container {
+      top: -84px;
+      left: -167px;
+      z-index: -1;
+      &__fill {
+        width: calc(50vh + 344px);
+        height: calc(50vh + 344px);
+      }
+      &__ring {
+        width: calc(50vh + 367px);
+        height: calc(50vh + 357px);
+      }
+      .log-in-images {
+        display: flex;
+        gap: 50px;
+        position: absolute;
+        top: calc(46vh - -28vh);
+        left: 315px;
+        &__image {
+          width: 140px;
+          height: 210px;
+          border-radius: 15px;
+          box-shadow: 10px 10px 14px 0px rgba(0, 0, 0, 0.25);
+        }
+      }
+      .ellipse {
+        display: block;
+ 
+      }
+      .log-in-context {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        position: absolute;
+        top: calc(35vh - -1vh);
+        left: 250px;
+        z-index: 2;
+
+        width: 346px;
+        height: 212px;
+        &__header {
+          font: normal 600 28px/125% Poppins, Arial, Helvetica, "sans-serif";
+          color: var(--fg_1);
+        }
+        &__body {
+          font: normal 500 16px/120% Poppins, Arial, Helvetica, "sans-serif";
+          color: var(--fg_2);
+        }
+      }
+    }
+  }
+}
+.sign-up {
+  margin-bottom: 35px;
+  @include min-media(tablet) {
+    &__log-alt-cont {
+      gap: 15px;
+    }
+    &__button {
+      margin: 0 0 0 0;
+    }
+  }
+  @include min-media(tablet2x) {
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+.sign-in-form {
+  @include min-media(tablet) {
+    &__sub-input {
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.sign-input {
+  @include min-media(tablet2x) {
+    &__input-cont {
+      input[type="email"],
+      input[type="email"] {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.log-in-form {
+  @include min-media(tablet2x) {
+    .brand-logo {
+      &__text {
+        color: var(--bg_4);
+      }
+    }
+  }
+}

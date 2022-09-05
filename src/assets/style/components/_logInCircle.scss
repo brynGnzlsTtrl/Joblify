@@ -1,0 +1,46 @@
+.log-in-form {
+  &__brand-logo {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+  .circle-container {
+    display: none;
+    top: calc(25vh - 327px);
+    left: -117px;
+    z-index: -1;
+    &__fill {
+      position: absolute;
+      width: calc(58px + 40vw);
+      height: calc(58px + 40vw);
+    }
+    &__ring {
+      width: calc(68px + 40vw);
+      height: calc(68px + 40vw);
+    }
+    &__log-in-images {
+      display: none;
+    }
+    &__log-in-context {
+      display: none;
+    }
+    .ellipse {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      &__bg-1 {
+        top: calc(36vh - 75px);
+        left: 436px;
+        width: 18px;
+        height: 18px;
+      }
+      &__bg-2 {
+        top: calc(36vh - 78px);
+        left: 485px;
+        width: 100px;
+        height: 100px;
+        
+      }
+    }
+  }
+}

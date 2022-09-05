@@ -1,21 +1,17 @@
 // abstrarcts
-@import "./abstracts/_variables";
+@import "./abstracts/variables";
+@import "./abstracts/breakpoints";
 
 
 // base
 @import "./base/resets";
+@import "./base/mixins";
 
 
 
 // components
-@import "./components/_signUp";
-
-
-
-// media 
-body {
-    background: #f5f5f5;
-}
+@import "./components/signUp";
+@import "./components/logInCircle";
 
 
 // pages 
@@ -23,8 +19,20 @@ body {
 
 
 // reusables
-@import "./reusable/brandLogo.scss"
-
+@import "./reusable/_brandLogo.scss";
 
 // vendors
+
+
+
+
+
+// media 
+
+@import "./media/loginForm";
+
+body {
+    background: #f5f5f5;
+}
+
 
