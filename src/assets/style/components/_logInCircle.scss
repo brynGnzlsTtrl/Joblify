@@ -42,5 +42,27 @@
         
       }
     }
+    .log-in-context {
+      display: none;
+      flex-direction: column;
+      gap: 35px;
+      position: absolute;
+      top: calc(35vh - -1vh);
+      left: 250px;
+      z-index: 2;
+
+      width: 346px;
+      height: 212px;
+      &__header {
+        font: normal 600 28px/125% Poppins, Arial, Helvetica, "sans-serif";
+        letter-spacing: .09em;
+        color: var(--fg_1);
+      }
+      &__body {
+        font: normal 500 16px/120% Poppins, Arial, Helvetica, "sans-serif";
+        letter-spacing: .15em;
+        color: var(--fg_2);
+      }
+    }
   }
 }

@@ -81,18 +81,18 @@
       position: absolute;
       right: 0;
       width: 50vw;
-      border: none;
-      background: none;
-      border-radius: initial;
-      box-shadow: initial;
-      backdrop-filter: none;
+      // border: none;
+      // background: none;
+      // border-radius: initial;
+      // box-shadow: initial;
+      // backdrop-filter: none;
 
       &__cont {
         width: 340px;
       }
-      &__overlay {
-        display: none;
-      }
+      // &__overlay {
+      //   display: none;
+      // }
     }
     &__ellipse_bg-1 {
       display: none;
@@ -131,23 +131,6 @@
       }
       .log-in-context {
         display: flex;
-        flex-direction: column;
-        gap: 35px;
-        position: absolute;
-        top: calc(35vh - -1vh);
-        left: 250px;
-        z-index: 2;
-
-        width: 346px;
-        height: 212px;
-        &__header {
-          font: normal 600 28px/125% Poppins, Arial, Helvetica, "sans-serif";
-          color: var(--fg_1);
-        }
-        &__body {
-          font: normal 500 16px/120% Poppins, Arial, Helvetica, "sans-serif";
-          color: var(--fg_2);
-        }
       }
     }
   }
