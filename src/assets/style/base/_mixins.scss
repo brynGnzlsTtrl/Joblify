@@ -2,7 +2,7 @@
     font-family: Rubik, Arial, Helvetica, "sans-serif";
     @if ($size == "small") {
       font-size: 33px;
-    } @else if (size == "regular") {
+    } @else if ($size == "regular") {
       font-size: 52px;
     } @else if ($size == "large") {
       font-size: 72px;

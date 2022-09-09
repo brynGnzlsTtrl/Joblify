@@ -237,6 +237,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_bem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lib/bem */ "./src/lib/bem.js");
 /* harmony import */ var _data_log_in_form_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/log-in-form_data */ "./src/data/log-in-form_data.js");
 /* harmony import */ var _utils_ImgOptimize_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/ImgOptimize.jsx */ "./src/utils/ImgOptimize.jsx");
+/* harmony import */ var _ellipse_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ellipse.jsx */ "./src/components/ellipse.jsx");
+
 
 
 
@@ -274,6 +276,12 @@ function LogInCircle(_ref) {
     className: (0,_lib_bem__WEBPACK_IMPORTED_MODULE_1__["default"])(className) + "__log-in-context log-in-context"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Images, {
     className: (0,_lib_bem__WEBPACK_IMPORTED_MODULE_1__["default"])(className) + "__log-in-images log-in-images"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ellipse_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "circle-container__ellipse ellipse__bg-1 ellipse",
+    color: "var(--bg_1)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ellipse_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "circle-container__ellipse ellipse__bg-2 ellipse",
+    color: "var(--bg_2)"
   }));
 }
 
@@ -377,10 +385,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils_ImgOptimize_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/ImgOptimize.jsx */ "./src/utils/ImgOptimize.jsx");
+/* harmony import */ var _components_ellipse_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/ellipse.jsx */ "./src/components/ellipse.jsx");
 
 
-
-var i = __webpack_require__(/*! ../../../assets/images/sign-up_overlay.avif */ "./src/assets/images/sign-up_overlay.avif");
 
 function SignUp(_ref) {
   var className = _ref.className;
@@ -454,7 +461,13 @@ function SignUp(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
     d: "M13.5725 4.54125C13.9033 4.15999 14.1555 3.71715 14.3147 3.23814C14.4739 2.75914 14.5368 2.25341 14.5 1.75C13.4845 1.83198 12.5418 2.30961 11.875 3.08C11.5557 3.44923 11.3138 3.87877 11.1635 4.34319C11.0132 4.80761 10.9576 5.29746 11 5.78375C11.4954 5.78788 11.9851 5.67796 12.4312 5.4625C12.8772 5.24704 13.2678 4.93183 13.5725 4.54125V4.54125ZM15.7775 11.0513C15.7834 10.3808 15.96 9.72284 16.2907 9.13955C16.6214 8.55626 17.0952 8.06685 17.6675 7.7175C17.3063 7.19708 16.8289 6.76798 16.273 6.46422C15.7171 6.16045 15.0981 5.99038 14.465 5.9675C13.1 5.8275 11.84 6.76375 11.1138 6.76375C10.3875 6.76375 9.36376 5.985 8.22626 6.0025C7.48263 6.027 6.75803 6.24381 6.12316 6.63179C5.48828 7.01977 4.9648 7.56567 4.60376 8.21625C3.06376 10.8938 4.21001 14.875 5.75001 17.0362C6.45001 18.095 7.32501 19.2938 8.48001 19.25C9.63501 19.2062 10.0113 18.5325 11.35 18.5325C12.6888 18.5325 13.1 19.25 14.2375 19.2237C15.375 19.1975 16.18 18.1388 16.915 17.08C17.4357 16.3113 17.8424 15.4714 18.1225 14.5863C17.4291 14.2905 16.8374 13.7981 16.4207 13.1699C16.0039 12.5417 15.7803 11.8051 15.7775 11.0513V11.0513Z",
     fill: "black"
-  }))))));
+  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ellipse_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: "sign-up__ellipse-bg-1 ellipse",
+    color: "var(--bg_1) "
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ellipse_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: "sign-up__ellipse-bg-2 ellipse",
+    color: "var(--bg_2) "
+  }));
 }
 
 function LogAlternative(_ref2) {
@@ -34204,7 +34217,7 @@ module.exports = __webpack_require__.p + "61e497a05c22fee403bd.webp";
 /***/ ((module) => {
 
 "use strict";
-module.exports = "data:text/x-scss;base64,Ly8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luCmV4cG9ydCB7fTs=";
+module.exports = "data:text/x-scss;base64,Ly8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luCmV4cG9ydCB7fTsKICAgIGlmKG1vZHVsZS5ob3QpIHsKICAgICAgLy8gMTY2MjQ0ODkyODg1MwogICAgICB2YXIgY3NzUmVsb2FkID0gcmVxdWlyZSgiLi4vLi4vLi4vbm9kZV9tb2R1bGVzL21pbmktY3NzLWV4dHJhY3QtcGx1Z2luL2Rpc3QvaG1yL2hvdE1vZHVsZVJlcGxhY2VtZW50LmpzIikobW9kdWxlLmlkLCB7ImxvY2FscyI6ZmFsc2V9KTsKICAgICAgbW9kdWxlLmhvdC5kaXNwb3NlKGNzc1JlbG9hZCk7CiAgICAgIG1vZHVsZS5ob3QuYWNjZXB0KHVuZGVmaW5lZCwgY3NzUmVsb2FkKTsKICAgIH0KICA=";
 
 /***/ })
 

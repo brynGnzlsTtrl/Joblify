@@ -70,9 +70,12 @@
     }
   }
   @include min-media(tablet2x) {
-    &__brand-logo {
+    .brand-logo {
       left: 50px;
       z-index: 2;
+      &__text {
+        @include BrandTextStyle(light, small);
+      }
     }
     &__sign-up {
       height: 500px;
@@ -81,18 +84,49 @@
       position: absolute;
       right: 0;
       width: 50vw;
-      // border: none;
-      // background: none;
-      // border-radius: initial;
-      // box-shadow: initial;
-      // backdrop-filter: none;
+      border: none;
+      background: none;
+      border-radius: initial;
+      box-shadow: initial;
+      backdrop-filter: none;
 
       &__cont {
-        width: 340px;
+        width: 460px;
+        padding-top: 55px;
+        padding-left: 40px;
+        border-right-style: solid;
+        border-right-width: 0px;
+        padding-right: 40px;
+        border-left-style: solid;
+        border-left-width: 0px;
+        padding-bottom: 55px;
+        background: linear-gradient(
+          164.21deg,
+          rgba(255, 255, 255, 0.4) 3.03%,
+          rgba(255, 255, 255, 0.1) 95.86%
+        );
+        border-radius: 30px;
+        box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
       }
-      // &__overlay {
-      //   display: none;
-      // }
+      &__overlay {
+        display: none;
+        width: 415px;
+        padding-top: 55px;
+        padding-left: 40px;
+      }
+      &__ellipse-bg-1 {
+        display: block;
+        bottom: -150px;
+        left: calc(25vw - 20px);
+        z-index: -1;
+      }
+      &__ellipse-bg-2 {
+        display: block;
+        top: 73px;
+        left: calc(25vw - -75px);
+        z-index: -1;
+      }
     }
     &__ellipse_bg-1 {
       display: none;
@@ -118,6 +152,7 @@
         position: absolute;
         top: calc(46vh - -28vh);
         left: 315px;
+        transform: rotate(-10deg);
         &__image {
           width: 140px;
           height: 210px;
@@ -127,10 +162,56 @@
       }
       .ellipse {
         display: block;
- 
       }
       .log-in-context {
         display: flex;
+      }
+    }
+  }
+  @include min-media(laptop) {
+    .brand-logo {
+      &__text {
+        @include BrandTextStyle(light, regular);
+      }
+      &__icon {
+        &_small {
+          display: none;
+        }
+        &_regular {
+          display: block;
+        }
+      }
+    }
+    .circle-container {
+      top: -130px;
+      left: -154px;
+      &__fill {
+        width: calc(35vh + 15vw + 344px);
+        height: calc(35vh + 15vw + 344px);
+      }
+      &__ring {
+        width: calc(35vh + 15vw + 367px);
+        height: calc(35vh + 15vw + 367px);
+      }
+      .log-in-context {
+        top: calc(36vh + 25px);
+        &__header {
+          font: var(--Poppins_h2_SB);
+        }
+        &__body {
+          font: var(--Poppins_p2_M);
+        }
+      }
+      .ellipse {
+        &__bg-1 {
+          top: calc(36vh - 50px)
+        }
+        &__bg-2 {
+          top: calc(36vh - 50px);
+        }
+      }
+      .log-in-images {
+        top: calc(47vh + 14vw + 78px);
       }
     }
   }
@@ -166,16 +247,6 @@
       input[type="email"],
       input[type="email"] {
         width: 100%;
-      }
-    }
-  }
-}
-
-.log-in-form {
-  @include min-media(tablet2x) {
-    .brand-logo {
-      &__text {
-        color: var(--bg_4);
       }
     }
   }

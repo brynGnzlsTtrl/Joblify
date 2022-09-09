@@ -1,7 +1,7 @@
 import React from "react";
 import ImgOptimize from "../../../utils/ImgOptimize.jsx";
+import Ellipse from "../../../components/ellipse.jsx";
 
-const i = require("../../../assets/images/sign-up_overlay.avif");
 
 export default function SignUp({ className }) {
   return (
@@ -74,6 +74,8 @@ export default function SignUp({ className }) {
           </LogAlternative>
         </div>
       </div>
+      <Ellipse className="sign-up__ellipse-bg-1 ellipse" color="var(--bg_1) "/>
+      <Ellipse className="sign-up__ellipse-bg-2 ellipse" color="var(--bg_2) "/>
     </div>
   );
 }
