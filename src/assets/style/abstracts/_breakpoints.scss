@@ -4,6 +4,7 @@ $breakpoints: (
     "tablet2x": "980px",
     "laptop": "1280px",
     "desktop": "1440px",
+    "uhd": "1980px" 
 );
 
 @mixin min-media($bp) {
