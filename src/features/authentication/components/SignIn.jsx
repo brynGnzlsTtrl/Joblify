@@ -2,12 +2,16 @@ import React from "react";
 import ImgOptimize from "../../../utils/ImgOptimize.jsx";
 import Ellipse from "../../../components/ellipse.jsx";
 
-
-export default function SignUp({ className }) {
+export default function SignIn({ className }) {
   return (
     <div className={className}>
-      <div className="sign-up__cont">
-        <ImgOptimize className="sign-up__overlay" imageName="sign-up_overlay" imageType="png" alt="overlay"/>
+      <div className="sign-in__cont">
+        <ImgOptimize
+          className="sign-in__overlay"
+          imageName="sign-in_overlay"
+          imageType="png"
+          alt="overlay"
+        />
         <h1>Log in</h1>
         <form className="sign-in-form">
           <Input type="email" name="Email" />
@@ -17,19 +21,21 @@ export default function SignUp({ className }) {
               <input type="checkbox" name="remember-user" id="remember-user" />
               <label htmlFor="remember-user">Remember User</label>
             </div>
-            <a href="#" className="forgot-password">Forgot Password</a>
+            <a href="#" className="forgot-password">
+              Forgot Password
+            </a>
           </div>
         </form>
-        <button className="sign-up__button" type="submit">
+        <button className="sign-in__button" type="submit">
           Sign in
         </button>
 
-        <div className="sign-up__or">
+        <div className="sign-in__or">
           <hr />
           <span>OR</span>
           <hr />
         </div>
-        <div className="sign-up__log-alt-cont">
+        <div className="sign-in__log-alt-cont">
           <LogAlternative platform="Google">
             <svg
               className="log-Alternative__icon"
@@ -72,17 +78,22 @@ export default function SignUp({ className }) {
               />
             </svg>
           </LogAlternative>
+
+          <div className="sign-in__log-alternative log-alternative" style={{border: "2px solid var(--bg_2)"}}>
+            
+            <p className="log-alternative__context">Sign Up</p>
+          </div>
         </div>
       </div>
-      <Ellipse className="sign-up__ellipse-bg-1 ellipse" color="var(--bg_1) "/>
-      <Ellipse className="sign-up__ellipse-bg-2 ellipse" color="var(--bg_2) "/>
+      <Ellipse className="sign-in__ellipse-bg-1 ellipse" color="var(--bg_1) " />
+      <Ellipse className="sign-in__ellipse-bg-2 ellipse" color="var(--bg_2) " />
     </div>
   );
 }
 
 function LogAlternative({ platform, children }) {
   return (
-    <div className="sign-up__log-alternative log-alternative">
+    <div className="sign-in__log-alternative log-alternative">
       {children}
       <p className="log-alternative__context">Continue with {platform}</p>
     </div>
@@ -91,7 +102,7 @@ function LogAlternative({ platform, children }) {
 
 function Input({ type, name }) {
   return (
-    <div className="sign-input sign-up__sign-input">
+    <div className="sign-input sign-in__sign-input">
       <label htmlFor={type}>{name}</label>
       <div className="sign-input__input-cont">
         <span className="input-cont__placeholder">{name}</span>
@@ -100,6 +111,3 @@ function Input({ type, name }) {
     </div>
   );
 }
-
-
-

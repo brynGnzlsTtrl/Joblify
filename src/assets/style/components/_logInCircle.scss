@@ -6,7 +6,7 @@
   }
   .circle-container {
     display: none;
-    top: calc(25vh - 327px);
+    top: -57px;
     left: -117px;
     z-index: -1;
     &__fill {
@@ -15,8 +15,10 @@
       height: calc(58px + 40vw);
     }
     &__ring {
+      position: relative;
       width: calc(68px + 40vw);
       height: calc(68px + 40vw);
+      z-index: -1;
     }
     &__log-in-images {
       display: none;
@@ -39,7 +41,6 @@
         left: 485px;
         width: 100px;
         height: 100px;
-        
       }
     }
     .log-in-context {
@@ -55,12 +56,12 @@
       height: 212px;
       &__header {
         font: normal 600 28px/125% Poppins, Arial, Helvetica, "sans-serif";
-        letter-spacing: .09em;
+        letter-spacing: 0.09em;
         color: var(--fg_1);
       }
       &__body {
         font: normal 500 16px/120% Poppins, Arial, Helvetica, "sans-serif";
-        letter-spacing: .15em;
+        letter-spacing: 0.15em;
         color: var(--fg_2);
       }
     }

@@ -10,26 +10,30 @@
 
 
 // components
-@import "./components/signUp";
+@import "./components/signIn";
 @import "./components/logInCircle";
+@import "./components/signUp";
 
 
 // pages 
-@import "./pages/_loginForm";
+@import "./pages/_loginPage";
 
 
 // reusables
-@import "./reusable/_brandLogo.scss";
+@import "./reusable/_brandLogo";
+@import "./reusable/button";
+
 
 // vendors
 
 
-
+// animation
+@import "./animation/loginPage";
 
 
 // media 
 
-@import "./media/loginForm";
+@import "./media/loginPage";
 
 
 
