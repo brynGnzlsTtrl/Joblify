@@ -1,6 +1,13 @@
 import React from "react";
 
 //React Components
+// import "../../assets/fonts/poppins-v20-latin-600.woff";
+// import "../../assets/fonts/poppins-v20-latin-600.woff2";
+// import "../../assets/fonts/poppins-v20-latin-regular.woff";
+// import "../../assets/fonts/poppins-v20-latin-regular.woff2";
+// import "../../assets/fonts/rubik-v21-latin-500.woff";
+// import "../../assets/fonts/rubik-v21-latin-500.woff2";
+
 import BrandLogo from "common/components/BrandLogo.jsx"
 import SignIn from "./features/authentication/components/SignIn.jsx";
 import Ellipse from "common/components/Ellipse.jsx";
@@ -8,8 +15,8 @@ import LogInCircle from "./components/LogInCircle.jsx";
 import SignUp from "./components/SignUp.jsx";
 
 
-
-import "./styles/main.scss";
+import "common/styles/common.scss"
+import "./signIn.scss";
 
 
 

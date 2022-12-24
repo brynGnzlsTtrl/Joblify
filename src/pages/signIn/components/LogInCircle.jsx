@@ -2,6 +2,7 @@ import React from "react";
 import getBaseClass from "../../../common/lib/bem";
 import ImagOptimize from "../../../common/utils/ImgOptimize.jsx";
 import Ellipse from "../../../common/components/Ellipse.jsx";
+import { logInImages } from "../features/data-content/log-in-circle-images";
 
 export default function LogInCircle({ className }) {
     return (

@@ -4,29 +4,36 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
-
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
-    "react-vendors": ["react", "react-dom/client"],
-    "css-abstract": [path.resolve(__dirname, "./src/assets/style/main.scss")],
+    // "react-dom" : "react-dom",
+    // "react": "react",
+    "react-vendors": ["react", "react-dom"],
 
+    "common-css": [path.resolve(__dirname, "src/common/styles/common.scss")],
+    "fonts" : [path.resolve(__dirname, "src/common/styles/abstracts/_font.scss")],
+    // "react-vendors": ["react", "react-dom", "react-dom/client"],
     signIn: {
       import: "./src/pages/signIn/signIn.js",
-      dependOn: ["react-vendors", "css-abstract"],
+      dependOn: ["react-vendors", "fonts", "common-css"],
     },
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name]/[name].js",
-    assetModuleFilename: 'assets/[hash][ext][query]',
+    path: (path.resolve(__dirname, "dist-config")),
+    // filename: "[name]/[name].js",
+    filename: (pathData) => {
+      return ["react-vendors", "common-css", "fonts"].includes(pathData.chunk.name) ? "/common/[name].js" : "[name]/[name].js"
+    },
     clean: true,
   },
   optimization: {
     emitOnErrors: false,
-    runtimeChunk: "single",
+    runtimeChunk: {
+      name: "runtime",
+    },
     splitChunks: {
-      chunks: "all",
+      minSize: 0,
     },
   },
   module: {
@@ -47,8 +54,18 @@ module.exports = {
         type: "asset",
       },
       {
-        test: /\.(svg|img|jpg|avif|woff|woff2|webp|png)$/,
+        test: /\.(svg|img|jpg|avif|webp|png)$/,
         type: "asset/resource",
+        generator: {
+          filename: "assets/[hash][ext][query]",
+        }
+      },
+      {
+        test: /\.(woff|woff2)$/,
+        type: "asset/resource",
+        generator : {
+          filename: "assets/[name][ext]",
+        }
       },
       {
         test: /\.jsx?$/,
@@ -61,33 +78,24 @@ module.exports = {
         },
       },
     ],
-  }, 
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name]/[name].css",
+      filename: (pathData) => {
+        return ["react-vendors", "common-css", "fonts"].includes(pathData.chunk.name) ? "/common/[name].css" : "[name]/[name].css"
+      },
     }),
-    new HtmlWebpackPlugin({
-      excludeChunks: [ 'react-vendors', "css-abstract" ],
-      filename: "[name]/[name].html",
-      title: "Joblify [name]",
-      templatecontent: `
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Joblify</title>
-          <link  type="text/css" rel="stylesheet" href="main.css" />
-        </head>
-        <body>
-          <div id="root"></div>
-        </body>
-      
-      </html>
-      `,
-      excludeAssets: ["react-vendors", "css-abstract", "react", "react-dom/client"],
+    // new HtmlWebpackPlugin({
+    //   filename: "sample.html",
+    //   template: path.resolve(__dirname, "src/pages/signIn/signIn.html"),
+    // }),
+    ...["signIn"].map((e) => {
+      return new HtmlWebpackPlugin({
+        filename: e + "/" + e + ".html",
+        template: path.resolve(__dirname, "src/pages/" + e + "/" + e + ".html"),
+      });
     }),
+
     new BundleAnalyzerPlugin(),
   ],
   devtool: "source-map",
@@ -98,16 +106,18 @@ module.exports = {
   resolve: {
     alias: {
       assets: path.resolve(__dirname, "src/assets"),
-      common: path.resolve(__dirname, "src/common")
+      common: path.resolve(__dirname, "src/common"),
     },
   },
   devServer: {
     open: true,
     // hot: "only",
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, "dist-config"),
     },
     compress: true,
-    port: 9000,
+    port: 9001,
   },
+  // target: "web",
+  
 };
